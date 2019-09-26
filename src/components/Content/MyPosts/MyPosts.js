@@ -2,23 +2,26 @@ import React from 'react';
 import s from './MyPosts.module.css';
 import Post from './Posts/Post';
 
+
 const MyPosts = (props) => {
+        
     
-    let postArraySecond = props.huj.map(p => <Post message={p.postMess} likeCount={p.postLike} />);
+  let postArraySecond = props.posts.map(p => <Post message={p.postMess} likeCount={p.postLike} />);
   let newPostElement = React.createRef();
-
-  let addPost = () => {
-    let text = newPostElement.current.value;
-    props.addPost(text);
-    newPostElement.current.value = '';
-} 
-
-   return (<div>
-        <textarea ref={newPostElement} />
-        <button onClick={addPost}>Post</button>
-        <button>UnPost</button>
+  
+  let onAddPost = () => {  
+        props.addPost();
+  }
+  let onPostChange =()=>{
+        let text=newPostElement.current.value;
+        props.updateNewPostText(text);
+}
+   return (
+        <div>
+        <textarea onChange={onPostChange} ref={newPostElement} value={props.newPostText}/>
+        <button onClick = {onAddPost}>Post</button>
         {postArraySecond}
-    </div>
+        </div>
     );
 }
 

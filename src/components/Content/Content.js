@@ -2,15 +2,16 @@ import React from 'react';
 import MyPosts from './MyPosts/MyPosts'
 import s from './Content.module.css'
 import ProfileInfo from './ProfileInfo/ProfileInfo';
+import MyPostsContainer from './MyPosts/MyPostsContainer';
 
 
 
 const Content = (props) => {
-
+  
   return (<div className={s.content}>
     <ProfileInfo/>
-    <MyPosts huj={props.hujj.posts} addPost={props.addPost} newPostText={props.hujj.postTextHuj} />
-    
+    <MyPostsContainer store={props.store}/>
+    {/* b={props.a.posts} dispatch={props.dispatch}  c={props.a.newPostText} */}
   </div>);
 }
 

@@ -9,12 +9,12 @@ return(<div className={s.content}>
    <img src='https://i.ytimg.com/vi/ywxVN5u2FwY/hqdefault.jpg'
   className={s.ava}></img>
 </div>
-<Friend friendName='Миша Компотик'/>
+<Friend friendName='Миша Компотик'country='Russia'/>
 <div>
    <img src='https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/Silvio_Berlusconi_in_2015.jpeg/250px-Silvio_Berlusconi_in_2015.jpeg'
   className={s.ava}></img>
 </div>
-<Friend friendName='Сильвио'/>
+<Friend friendName='Сильвио' country='Italy'/>
 </div>
 );
 }
