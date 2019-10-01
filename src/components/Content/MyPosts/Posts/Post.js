@@ -5,7 +5,7 @@ const Post = (props)=> {
     
 return (<div>
 <div className={s.postAva}>
-    <img  src='https://os1.i.ua/3/1/12714020_622be34b.jpg'></img>
+    <img  src='https://delai-vibor.com/wp-content/uploads/2017/12/pilot.jpg'></img>
 { props.message }
 </div>
 
